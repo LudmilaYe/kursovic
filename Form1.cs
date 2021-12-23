@@ -46,6 +46,7 @@ namespace kursovic
         private void timer1_Tick(object sender, EventArgs e)//событие для таймера
         {
             emitter.UpdateState(); // Каждый тик обновляем систему
+            label4.Text = "Кол-во частиц: " +( emitter.particles.Count+emitter.ParticlesCount);
             using (var g = Graphics.FromImage(picDisplay.Image))
             {
                 g.Clear(Color.Black); // Очистка и окраска фона в черный цвет

@@ -31,7 +31,7 @@ namespace kursovic
         public void UpdateState() // Метод обновления состояния системы
         {
             int particlesToCreate = ParticlesPerTick; // Добавляю генерацию частиц не больше частиц за тик
-
+            ParticlesCount = 0;
             foreach (var particle in particles)
             {
                 if (particle.life <= 0) // если здоровье кончилось

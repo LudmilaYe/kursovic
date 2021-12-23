@@ -38,6 +38,7 @@ namespace kursovic
             this.tbSpeed = new System.Windows.Forms.TrackBar();
             this.tbCountOfParticlesPerTick = new System.Windows.Forms.TrackBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRadius)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSpeed)).BeginInit();
@@ -87,7 +88,7 @@ namespace kursovic
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 12F);
-            this.label3.Location = new System.Drawing.Point(608, 457);
+            this.label3.Location = new System.Drawing.Point(603, 438);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(250, 22);
             this.label3.TabIndex = 4;
@@ -106,7 +107,7 @@ namespace kursovic
             // 
             // tbCountOfParticlesPerTick
             // 
-            this.tbCountOfParticlesPerTick.Location = new System.Drawing.Point(593, 500);
+            this.tbCountOfParticlesPerTick.Location = new System.Drawing.Point(595, 463);
             this.tbCountOfParticlesPerTick.Maximum = 20;
             this.tbCountOfParticlesPerTick.Minimum = 2;
             this.tbCountOfParticlesPerTick.Name = "tbCountOfParticlesPerTick";
@@ -121,11 +122,22 @@ namespace kursovic
             this.timer1.Interval = 80;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F);
+            this.label4.Location = new System.Drawing.Point(612, 513);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(178, 22);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Кол-во частиц:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 568);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tbCountOfParticlesPerTick);
             this.Controls.Add(this.tbSpeed);
             this.Controls.Add(this.label3);
@@ -154,6 +166,7 @@ namespace kursovic
         private System.Windows.Forms.TrackBar tbSpeed;
         private System.Windows.Forms.TrackBar tbCountOfParticlesPerTick;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
