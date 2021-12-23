@@ -7,7 +7,7 @@ namespace CourseWork_L.Egupova
     public class Emitter
     {
         public List<Particle> particles = new List<Particle>(); // Список частиц
-        
+        public List<IImpactPoint> impactPoints = new List<IImpactPoint>(); // Список специальных точек
 
         public float GravitationX = 0; // Гравитация по X
         public float GravitationY = 1; // Гравитация по Y
@@ -51,7 +51,10 @@ namespace CourseWork_L.Egupova
                     particle.Y += particle.speedY; // Передвигаю частицу по Y
 
                     particle.life -= 1; // Уменьшаю кол-во здоровья на 1
-                   
+                    foreach (var point in impactPoints)
+                    {
+                        point.ImpactParticle(particle);
+                    }
 
                     particle.speedX += GravitationX; // Гравитация по X
                     particle.speedY += GravitationY; // Гравитация по Y
@@ -96,7 +99,10 @@ namespace CourseWork_L.Egupova
             {
                 particle.Draw(g);
             }
-            
+            foreach (var point in impactPoints)
+            {
+                point.Render(g); // Рендер частиц
+            }
         }
     }
 }
