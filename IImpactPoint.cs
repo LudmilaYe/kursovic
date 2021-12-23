@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace CourseWork_L.Egupova
+namespace kursovic
 {
     public abstract class IImpactPoint
     {

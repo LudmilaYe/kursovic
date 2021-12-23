@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace CourseWork_L.Egupova
+namespace kursovic
 {
     public class Emitter
     {
