@@ -55,9 +55,12 @@ namespace kursovic
             // tbRadius
             // 
             this.tbRadius.Location = new System.Drawing.Point(166, 438);
+            this.tbRadius.Maximum = 300;
+            this.tbRadius.Minimum = 50;
             this.tbRadius.Name = "tbRadius";
             this.tbRadius.Size = new System.Drawing.Size(284, 56);
             this.tbRadius.TabIndex = 1;
+            this.tbRadius.Value = 100;
             this.tbRadius.Scroll += new System.EventHandler(this.tbRadius_Scroll);
             // 
             // label1
@@ -93,17 +96,23 @@ namespace kursovic
             // tbSpeed
             // 
             this.tbSpeed.Location = new System.Drawing.Point(166, 500);
+            this.tbSpeed.Maximum = 25;
+            this.tbSpeed.Minimum = 5;
             this.tbSpeed.Name = "tbSpeed";
             this.tbSpeed.Size = new System.Drawing.Size(284, 56);
             this.tbSpeed.TabIndex = 5;
+            this.tbSpeed.Value = 10;
             this.tbSpeed.Scroll += new System.EventHandler(this.tbSpeed_Scroll);
             // 
             // tbCountOfParticlesPerTick
             // 
             this.tbCountOfParticlesPerTick.Location = new System.Drawing.Point(593, 500);
+            this.tbCountOfParticlesPerTick.Maximum = 20;
+            this.tbCountOfParticlesPerTick.Minimum = 2;
             this.tbCountOfParticlesPerTick.Name = "tbCountOfParticlesPerTick";
             this.tbCountOfParticlesPerTick.Size = new System.Drawing.Size(284, 56);
             this.tbCountOfParticlesPerTick.TabIndex = 6;
+            this.tbCountOfParticlesPerTick.Value = 10;
             this.tbCountOfParticlesPerTick.Scroll += new System.EventHandler(this.tbCountOfParticlesPerTick_Scroll);
             // 
             // timer1
