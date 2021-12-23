@@ -61,6 +61,21 @@ namespace kursovic
                                                  // было ощущение движения эмиттера по кругу 
             picDisplay.Invalidate(); // Обновление picDisplay
         }
+
+        private void tbRadius_Scroll(object sender, EventArgs e)
+        {
+            point.Radius = tbRadius.Value;
+        }
+
+        private void tbSpeed_Scroll(object sender, EventArgs e)
+        {
+            point.Direction = tbSpeed.Value;
+        }
+
+        private void tbCountOfParticlesPerTick_Scroll(object sender, EventArgs e)
+        {
+            emitter.ParticlesPerTick = tbCountOfParticlesPerTick.Value;
+        }
     }
 
 }

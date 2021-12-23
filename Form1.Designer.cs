@@ -58,6 +58,7 @@ namespace kursovic
             this.tbRadius.Name = "tbRadius";
             this.tbRadius.Size = new System.Drawing.Size(284, 56);
             this.tbRadius.TabIndex = 1;
+            this.tbRadius.Scroll += new System.EventHandler(this.tbRadius_Scroll);
             // 
             // label1
             // 
@@ -95,6 +96,7 @@ namespace kursovic
             this.tbSpeed.Name = "tbSpeed";
             this.tbSpeed.Size = new System.Drawing.Size(284, 56);
             this.tbSpeed.TabIndex = 5;
+            this.tbSpeed.Scroll += new System.EventHandler(this.tbSpeed_Scroll);
             // 
             // tbCountOfParticlesPerTick
             // 
@@ -102,6 +104,7 @@ namespace kursovic
             this.tbCountOfParticlesPerTick.Name = "tbCountOfParticlesPerTick";
             this.tbCountOfParticlesPerTick.Size = new System.Drawing.Size(284, 56);
             this.tbCountOfParticlesPerTick.TabIndex = 6;
+            this.tbCountOfParticlesPerTick.Scroll += new System.EventHandler(this.tbCountOfParticlesPerTick_Scroll);
             // 
             // timer1
             // 
