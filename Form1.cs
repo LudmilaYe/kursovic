@@ -42,6 +42,25 @@ namespace kursovic
 
             emitter.impactPoints.Add(point); // Добавляем специальную точку (окружность) в список специальных точек
         }
+
+        private void timer1_Tick(object sender, EventArgs e)//событие для таймера
+        {
+            emitter.UpdateState(); // Каждый тик обновляем систему
+            using (var g = Graphics.FromImage(picDisplay.Image))
+            {
+                g.Clear(Color.Black); // Очистка и окраска фона в черный цвет
+
+                // Так работает движение эмиттера по кругу
+                emitter.X = (int)(point.X + point.Radius / 2 * Math.Cos(movement));
+                emitter.Y = (int)(point.Y + point.Radius / 2 * Math.Sin(movement));
+
+                emitter.Render(g); // Рендер системы
+            }
+            emitter.Direction -= (int)(point.Radius / 20); // Вращение эмиттера
+            movement += 0.01f * point.Direction; // Увеличиваем переменную движения, чтобы при обновлении системы
+                                                 // было ощущение движения эмиттера по кругу 
+            picDisplay.Invalidate(); // Обновление picDisplay
+        }
     }
 
 }
